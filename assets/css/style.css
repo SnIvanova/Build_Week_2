@@ -17,6 +17,50 @@
 .iconeAttivita, .infoAmici{
     color: #a8a8a8;
 }
+/* col destra */
+::-webkit-scrollbar {
+    width: 8px;
+}
 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #a19e9e;
+}
+
+
+
+/* FOOTER */
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+
+.bgGray {
+    background-color: #181818;
+}
+
+.ophow:hover {
+    opacity: 0.8;
+    animation-duration: 3ms;
+}
+
+.greenSpoBg {
+    background-color: #1ED760;
+}
+
+.greenSpo {
+    color: #1ED760;
+}
+
+#albumCoverBtm img {
+    width: 70px;
+}
+
+.fs-7 {
+    font-size: 0.75rem;
+}
 
 
