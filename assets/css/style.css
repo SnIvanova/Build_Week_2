@@ -1,3 +1,22 @@
 .utentiAmici {
     font-size: 1rem;
 }
+
+.infoAmici {
+    line-height: 0.2rem;
+}
+
+.infoAmici > p  {
+    font-size: 0.8rem;
+}
+
+.durataAmici {
+    font-size: 0.9rem;
+}
+
+.iconeAttivita, .infoAmici{
+    color: #a8a8a8;
+}
+
+
+
