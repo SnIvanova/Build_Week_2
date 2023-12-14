@@ -1,0 +1,27 @@
+#dash, #window, #cross  {
+    font-size: 0.5rem;
+}
+
+.utentiAmici {
+    font-size: 1rem;
+}
+
+#titolo1, #titolo2, #titolo3 {
+    font-size: 0.6rem;
+}
+
+.infoAmici  {
+    font-size: 0.5rem;
+    line-height: 0rem;
+}
+
+.durataAmici {
+    font-size: 0.5rem;
+}
+
+.iconeAttivita, .infoAmici, .durataAmici{
+    color: #a8a8a8;
+}
+
+
+
