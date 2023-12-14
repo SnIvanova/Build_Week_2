@@ -24,51 +24,49 @@
     <div class="container-fluid" style="height: 100dvh;">
         <div class="row" style="height: 88dvh;">
             <!-- LeftPart -->
-            <div class="col-3 p-0"  style="height: 90%;">
+            <div class="col-3 p-0"  style="height: 100%;">
                 <div class="container-fluid" style="height: 100%;">
-                    <div class="row" style="height: 20%;">
+                    <div class="row" style="height: 5%;">
                         <div class="col-12">
-                            <nav class="navbar navbar-dark" style="z-index: 3;">
-                                <div class="container-fluid bg-black p-0">
-                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span><i class="bi bi-three-dots"></i></span>
-                                    </button>
-                                </div>
-                            </nav>
-                            <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-                                <div class="bg-black p-0">
-                                    <ul>
-                                        <button class="bg-black"><li class="text-body-emphasis h4 list-unstyled"><i class="bi bi-bell"></i></li></button>
-                                        <button class="bg-black"><li class="text-body-emphasis h4 list-unstyled"><i class="bi bi-clock-history"></i></li></button>
-                                        <button class="bg-black"><li class="text-body-emphasis h4 list-unstyled"><i class="bi bi-gear"></i></li></button>
-                                    </ul>
-                                </div>
-                            </div> 
-                            <div class="row">
-                                <div class="col-12">
-                                    <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center mb-2"><i class="bi bi-house-door-fill fs-5 pe-3"></i>Home</a></h5>
-                                </div>
-                                <div class="col-12">
-                                    <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center mb-2"><i class="bi bi-search fs-5 pe-3"></i>Cerca</a></h5>
-                                </div>
-                                <div class="col-12">
-                                    <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center mb-2"><i class="bi bi-collection fs-5 pe-3"></i>La tua libreria</a></h5>
-                                </div>
+                            <div class="dropdown mt-2" style="margin-left: -2px;">
+                                <button class="btn text-white bg-black" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu bg-black">
+                                    <li><a class="dropdown-item text-white" href="#"><i class="bi bi-bell pe-2"></i>Action</a></li>
+                                    <li><a class="dropdown-item text-white" href="#"><i class="bi bi-clock-history pe-2"></i>Another action</a></li>
+                                    <li><a class="dropdown-item text-white" href="#"><i class="bi bi-gear pe-2"></i>Something else here</a></li>
+                                </ul>
+                            </div>                      
+                        </div>
+                    </div>
+                    
+                    <div style="height: 30%">
+                        <div class="row" style="height: 50%;">
+                            <div class="col-12 d-flex align-items-end">
+                                <h5 class="text-white h4 mb-0 lh-1"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center h4 mb-0"><i class="bi bi-house-door-fill fs-5 pe-3"></i>Home</a></h5>
+                            </div>
+                            <div class="col-12 d-flex align-items-center">
+                                <h5 class="text-white h4 mb-0 lh-1"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center"><i class="bi bi-search fs-5 pe-3"></i>Cerca</a></h5>
+                            </div>
+                            <div class="col-12 d-flex align-items-start">
+                                <h5 class="text-white h4 mb-0 lh-1"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center"><i class="bi bi-collection fs-5 pe-3"></i>La tua libreria</a></h5>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3" style="height: 50%;">
+                            <div class="col-12 d-flex align-items-end">
+                                <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center"><i class="bi bi-plus-square-fill fs-5 pe-3"></i>Crea playlist</a></h5>
+                            </div>
+                            <div class="col-12 d-flex align-items-center">
+                                <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center"><i class="bi bi-search fs-5 pe-3"></i>Brani che ti piacciono</a></h5>
+                            </div>
+                            <div class="col-12 d-flex align-items-start">
+                                <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center"><i class="bi bi-collection fs-5 pe-3"></i>I tuoi episodi</a></h5>
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-4" style="height: 20%;">
-                        <div class="col-12">
-                            <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center mb-2"><i class="bi bi-plus-square-fill fs-5 pe-3"></i>Crea playlist</a></h5>
-                        </div>
-                        <div class="col-12">
-                            <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center mb-2"><i class="bi bi-search fs-5 pe-3"></i>Brani che ti piacciono</a></h5>
-                        </div>
-                        <div class="col-12">
-                            <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center mb-2"><i class="bi bi-collection fs-5 pe-3"></i>I tuoi episodi</a></h5>
-                        </div>
-                    </div>
-                    <div class="row" style="height: 65%;">
+                    
+
+                    <div class="row" style="height: 58%;">
                         <div class="col-12" style="height: 100%;">
                             <ul class="p-0 mt-4 overflow-auto"   style="height: 100%">
                                 <li class="text-white-50 fs-6 list-unstyled">Phfbdsjfgjsd</li>
