@@ -1,4 +1,33 @@
 
 
 
+/* FOOTER */
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+
+.bgGray {
+    background-color: #181818;
+}
+
+.ophow:hover {
+    opacity: 0.8;
+    animation-duration: 3ms;
+}
+
+.greenSpoBg {
+    background-color: #1ED760;
+}
+
+.greenSpo {
+    color: #1ED760;
+}
+
+#albumCoverBtm img {
+    width: 70px;
+}
+
+.fs-7 {
+    font-size: 0.75rem;
+}
+
 
