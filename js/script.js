@@ -1,11 +1,7 @@
 //Parametro: query
 //Endpoint: https://striveschool-api.herokuapp.com/api/deezer/search?q={query}
 
-
-
 // footer
-
-
 
   //FUNZIONE PER LA BARRA AUDIO
     const range = document.querySelector(".volume input[type=range]");
@@ -121,17 +117,7 @@ function createPlaylist (a) {
         console.log(arrayPlaylist);
     }
 }
- //amici
 
-//  document.addEventListener('DOMContentLoaded', () => {
-//     createPlaylist(arrayPlaylist);
-//     let closeButton = document.querySelector('#closeBtn');
-//     closeButton.addEventListener('click', () => {
-//         console.log('click');
-//         let section = document.querySelector('#sectionAmici');
-//         section.parentNode.removeChild(section);
-//     })
-// });
 
 document.addEventListener('DOMContentLoaded', () => {
   let closeButton = document.querySelector('#closeBtn');
