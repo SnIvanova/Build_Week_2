@@ -14,7 +14,7 @@
     background-color: #131313;
 }
 
-.bi-arrow-left-short:hover, .bi-arrow-right-short:hover, {
+.bi-arrow-left-short:hover, .bi-arrow-right-short:hover {
     background-color: #131313;
     opacity: 0.6;
 }
@@ -22,3 +22,16 @@
 .dropdown-item:hover {
     background-color: #313131;
 }
+
+header {
+    background: rgb(255,255,255);
+background: linear-gradient(195deg, rgba(255,255,255,0) 15%, rgba(0,0,0,1) 100%);
+}
+
+#albumNameHomeHeader, #buttonHeaderHome {
+    font-size: 0.7rem;
+}
+
+.greenBtn {
+    background-color: #1ED760;
+  }
