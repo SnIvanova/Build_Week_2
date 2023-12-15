@@ -2,6 +2,7 @@
 //Endpoint: https://striveschool-api.herokuapp.com/api/deezer/search?q={query}
 
 
+
 // footer
 
 
@@ -122,14 +123,33 @@ function createPlaylist (a) {
 }
  //amici
 
- document.addEventListener('DOMContentLoaded', () => {
-    createPlaylist(arrayPlaylist);
-    let closeButton = document.querySelector('#closeBtn');
-    closeButton.addEventListener('click', () => {
-        console.log('click');
-        let section = document.querySelector('#sectionAmici');
-        section.parentNode.removeChild(section);
-    })
+//  document.addEventListener('DOMContentLoaded', () => {
+//     createPlaylist(arrayPlaylist);
+//     let closeButton = document.querySelector('#closeBtn');
+//     closeButton.addEventListener('click', () => {
+//         console.log('click');
+//         let section = document.querySelector('#sectionAmici');
+//         section.parentNode.removeChild(section);
+//     })
+// });
+
+document.addEventListener('DOMContentLoaded', () => {
+  let closeButton = document.querySelector('#closeBtn');
+  let sectionAmici = document.querySelector('#sectionAmici');
+  let restoreButton = document.querySelector('#iconaSezioneAttivita');
+  let sectionParent = sectionAmici.parentNode;
+
+  closeButton.addEventListener('click', () => {
+      console.log('click');
+      let sectionIndex = Array.from(sectionParent.children).indexOf(sectionAmici);
+
+      sectionAmici.parentNode.removeChild(sectionAmici);
+      restoreButton.style.display = 'block';
+      restoreButton.setAttribute('data-section-index', sectionIndex);
+  });
+  restoreButton.addEventListener('click', () => {
+      let sectionIndex = parseInt(restoreButton.getAttribute('data-section-index'));
+      sectionParent.insertBefore(sectionAmici, sectionParent.children[sectionIndex]);
+      restoreButton.style.display = 'none';
+  });
 });
-
-
