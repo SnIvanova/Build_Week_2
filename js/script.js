@@ -1,15 +1,6 @@
 //Parametro: query
 //Endpoint: https://striveschool-api.herokuapp.com/api/deezer/search?q={query}
 
-//amici
-
-    let closeButton = document.querySelector('#closeBtn');
-    console.log(closeButton);
-    closeButton.addEventListener('click', () => {
-        let section = document.querySelector('#sectionAmici');
-        section.style.display = 'none';
-    })
-
 
 // footer
 
@@ -134,6 +125,15 @@ function createPlaylist (a) {
 
 document.addEventListener('DOMContentLoaded', () => {
     createPlaylist(arrayPlaylist);
+    //amici
+
+    let closeButton = document.querySelector('#closeBtn');
+    console.log(closeButton);
+    closeButton.addEventListener('click', () => {
+        let section = document.querySelector('#sectionAmici');
+        section.style.display = 'none';
+    })
+
 
 
 });
