@@ -1,3 +1,38 @@
+/* Amici */
+#dash, #window, #cross  {
+    font-size: 0.5rem;
+}
+
+.utentiAmici {
+    font-size: 1rem;
+}
+
+#titolo1, #titolo2, #titolo3 {
+    font-size: 0.6rem;
+}
+
+.infoAmici  {
+    font-size: 0.5rem;
+    line-height: 0rem;
+}
+
+.durataAmici {
+    font-size: 0.5rem;
+}
+
+.iconeAttivita, .infoAmici, .durataAmici{
+    color: #a8a8a8;
+}
+
+.amiciBtn, #closeBtn {
+    background-color: black;
+}
+
+.amiciBtn:hover, #closeBtn:hover {
+    background-color: #a8a8a8;
+    border-radius: 50px;
+}
+
 
 
 
@@ -23,11 +58,51 @@
 }
 
 #albumCoverBtm img {
-    width: 70px;
+    width: 8dvh;
 }
 
 .fs-7 {
     font-size: 0.75rem;
 }
 
-
+.volume {
+    input[type=range] {
+      display: none;
+    }
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .icon-size {
+      font-size: 2rem;
+    }
+    
+    .bar-hoverbox {
+      padding: 10px 15px;
+      opacity: 0.7;
+      transition: opacity .2s;
+      
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+    
+    .bar {
+      background: #999;
+      height: 7px;
+      width: 120px;
+      border-radius: 15px;
+      overflow: hidden;
+      pointer-events: none;
+      
+      .bar-fill {
+        background: #FFF;
+        width: 0%;
+        height: 100%;
+        background-clip: border-box;
+        pointer-events: none;
+      }
+    }
+  }

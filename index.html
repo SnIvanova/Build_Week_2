@@ -13,60 +13,66 @@
     <!-- stylesheets -->
     <link rel="stylesheet" href="./assets/css/circular-font.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+     <!-- java -->
     <script src="./js/script.js"></script>
+
     <title>Spotify</title>
 </head>
+
+
 <body class="bg-black ">
-    <div class="container-fluid" >
+
+     
+    <div class="container-fluid"  >
         <div class="row" style="height: 88dvh;">
-            <!-- LeftPart -->
-            <div class="col-3 p-0"  style="height: 90%;">
+
+    <!-- LeftPart -->
+        <div class="col-3 p-0"  style="height: 100%;">
                 <div class="container-fluid" style="height: 100%;">
-                    <div class="row" style="height: 20%;">
+                    <div class="row" style="height: 5%;">
                         <div class="col-12">
-                            <nav class="navbar navbar-dark" style="z-index: 3;">
-                                <div class="container-fluid bg-black p-0">
-                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span><i class="bi bi-three-dots"></i></span>
-                                    </button>
-                                </div>
-                            </nav>
-                            <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-                                <div class="bg-black p-0">
-                                    <ul>
-                                        <button class="bg-black"><li class="text-body-emphasis h4 list-unstyled"><i class="bi bi-bell"></i></li></button>
-                                        <button class="bg-black"><li class="text-body-emphasis h4 list-unstyled"><i class="bi bi-clock-history"></i></li></button>
-                                        <button class="bg-black"><li class="text-body-emphasis h4 list-unstyled"><i class="bi bi-gear"></i></li></button>
-                                    </ul>
-                                </div>
-                            </div> 
-                            <div class="row">
-                                <div class="col-12">
-                                    <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center mb-2"><i class="bi bi-house-door-fill fs-5 pe-3"></i>Home</a></h5>
-                                </div>
-                                <div class="col-12">
-                                    <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center mb-2"><i class="bi bi-search fs-5 pe-3"></i>Cerca</a></h5>
-                                </div>
-                                <div class="col-12">
-                                    <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center mb-2"><i class="bi bi-collection fs-5 pe-3"></i>La tua libreria</a></h5>
-                                </div>
+                            <div class="dropdown mt-2" style="margin-left: -2px;">
+                                <button class="btn text-white bg-black" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-three-dots"></i></button>
+                                <ul class="dropdown-menu bg-black">
+                                    <li><a class="dropdown-item text-white" href="#"><i class="bi bi-bell pe-2"></i>Action</a></li>
+                                    <li><a class="dropdown-item text-white" href="#"><i class="bi bi-clock-history pe-2"></i>Another action</a></li>
+                                    <li><a class="dropdown-item text-white" href="#"><i class="bi bi-gear pe-2"></i>Something else here</a></li>
+                                </ul>
+                            </div>                      
+                        </div>
+                    </div>
+                    
+                    <div style="height: 30%">
+                        <div class="row" style="height: 50%;">
+                            <div class="col-12 d-flex align-items-end">
+                                <h5 class="text-white h4 mb-0 lh-1"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center h4 mb-0"><i class="bi bi-house-door-fill fs-5 pe-3"></i>Home</a></h5>
+                            </div>
+                            <div class="col-12 d-flex align-items-center">
+                                <h5 class="text-white h4 mb-0 lh-1"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center"><i class="bi bi-search fs-5 pe-3"></i>Cerca</a></h5>
+                            </div>
+                            <div class="col-12 d-flex align-items-start">
+                                <h5 class="text-white h4 mb-0 lh-1"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center"><i class="bi bi-collection fs-5 pe-3"></i>La tua libreria</a></h5>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3" style="height: 50%;">
+                            <div class="col-12 d-flex align-items-end">
+                                <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center"><i class="bi bi-plus-square-fill fs-5 pe-3"></i>Crea playlist</a></h5>
+                            </div>
+                            <div class="col-12 d-flex align-items-center">
+                                <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center"><i class="bi bi-search fs-5 pe-3"></i>Brani che ti piacciono</a></h5>
+                            </div>
+                            <div class="col-12 d-flex align-items-start">
+                                <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center"><i class="bi bi-collection fs-5 pe-3"></i>I tuoi episodi</a></h5>
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-4" style="height: 20%;">
-                        <div class="col-12">
-                            <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center mb-2"><i class="bi bi-plus-square-fill fs-5 pe-3"></i>Crea playlist</a></h5>
-                        </div>
-                        <div class="col-12">
-                            <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center mb-2"><i class="bi bi-search fs-5 pe-3"></i>Brani che ti piacciono</a></h5>
-                        </div>
-                        <div class="col-12">
-                            <h5 class="text-white h4"><a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center mb-2"><i class="bi bi-collection fs-5 pe-3"></i>I tuoi episodi</a></h5>
-                        </div>
-                    </div>
-                    <div class="row" style="height: 65%;">
+                    
+
+                    <div class="row" style="height: 58%;">
                         <div class="col-12" style="height: 100%;">
                             <ul class="p-0 mt-4 overflow-auto"   style="height: 100%">
                                 <li class="text-white-50 fs-6 list-unstyled">Phfbdsjfgjsd</li>
@@ -126,126 +132,175 @@
 
 
 <!-- CenterPart -->
-<div class="col bg-dark p-0" style="height: 90%;">
-    <iframe src="home.html" style="height: 100%; width: 100%;"></iframe>
-</div>
+        <div class="col bg-dark p-0" style="height: 90%;">
+            <iframe src="home.html" style="height: 100%; width: 100%;"></iframe>
+        </div>
 
 <!-- RightPart -->
-<div class="col-2 p-0" style="height: 90%;">
-</div>
+        <div class="col-2 p-0" style="height: 90%;">
+            </div>
+
  <!-- amici -->
- <section class="col-2 p-0 text-white d-xs-none d-md-block">
-    <div >
-       <div>
-           <div class="icone d-flex justify-content-end">
-               <i class="bi bi-dash-lg"></i>
-               <i class="bi bi-files mx-3"></i>
-               <i class="bi bi-x-lg me-2"></i>
-           </div>
-       </div>
-       <div>
-           <div class="attivita d-flex justify-content-between mt-2 ms-2">
-               <div class="mt-2">
-                   <h6 class="mb-0">Attività amici</h6>
-               </div>
-               <div class="mb-2 text-white-50">
-                   <i class="bi bi-person-add fs-4"></i> 
-                   <i class="bi bi-x-lg fs-4 ms-1"></i>
-               </div>
-           </div>
-       </div>
-       <div>
-           <div class="utentiAmici ms-2">
+            <section id="sectionAmici" class="col-2 p-0 text-white ms-2 d-none d-md-block">
+                <div >
+                    <div>
 
-               <div class="card border-0 text-secondary bg-black">
-                   
-                   <div class="d-flex justify-content-between">
-                       <div>
-                           <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="profile pic" class="rounded-circle" height="50" width="50">
-                       </div>
-                       <div class="infoAmici">
-                           <h6 class="fw-bolder">Charlie Hookham</h6>
-                           <p>In Camera Yumi Zooma</p>
-                           <p><i class="bi bi-pause-circle"></i> EP III</p>
-                       </div>
-                       <div class="durataAmici">
-                           <p>4 ore</p>
-                       </div>
-                   </div>
-               </div>
+                           </div>
+                           <div>
+                               <div class="attivita d-flex justify-content-between mt-2 ms-2">
+                                   <div class="mt-2">
+                                       <h6 class="mb-0">Attività amici</h6>
+                                   </div>
+                                   <div class="mb-2 text-white-50">
+                                       <button class="amiciBtn border-0 text-white-50 "><i class="bi bi-person-add fs-5"></i> </button>
+                                      <button id="closeBtn" class=" border-0 text-white-50 ps-0"> <i  class="bi bi-x-lg fs-5 ms-1"></i> </button> 
+                                   </div>
+                               </div>
+                            </div>
 
-               <div class="card border-0 text-secondary bg-black">
 
-                   <div class="d-flex justify-content-between">
-                       <div>
-                           <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="profile pic" class="rounded-circle" height="50" width="50">
-                       </div>
-                       <div class="infoAmici">
-                           <h6 class="fw-bolder">lightdark02</h6>
-                           <p>Aimed to Kill . Jade LeMac</p>
-                           <p><i class="bi bi-pause-circle"></i> Aimed to Kill</p>
-                       </div>
-                       <div class="durataAmici">
-                           <p>8 ore</p>
-                       </div>
-                   </div>
-                   
-               </div>
+                            <div class="mt-3">
+                                <div class="row d-flex">
 
-               <div class="card border-0 text-secondary bg-black">
-                   <div class="d-flex justify-content-between">
-                       <div>
-                           <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="profile pic" class="rounded-circle" height="50" width="50">
-                       </div>
-                       <div class="infoAmici">
-                           <h6 class="fw-bolder">Valeria Traverso</h6>
-                           <p>New Kings . Sleeping Wolf</p>
-                           <p> <i class="bi bi-music-note-beamed"></i> Twint Badass mood</p>
-                       </div>
-                       <div class="durataAmici">
-                           <p>3 giorni</p>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
-</div>
+                                    <div class="col-2">
+                                        
+                                        <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="profile pic" class="rounded-circle" height="30" width="30">
+                                    </div>
+    
+                                    <div class="col-7 infoAmici mt-1">
+                                            <p id="titolo1" class="fw-bold">Charlie Hookham</p>
+                                            <p class="mb-2">In Camera Yumi Zooma</p>
+                                            <p><i class="bi bi-pause-circle"></i> EP III </p>
+                                        </div>
+    
+                                        <div class="col-2 durataAmici p-0 text-end">
+                                            <p>4 ore</p>
+                                        </div>
+                                    </div>
+                                    <div class="col"></div>
+                                    <div class="col"></div>
+                                </div>
+
+                                <div class="row d-flex">
+
+                                    <div class="col-2">
+                                        
+                                        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="profile pic" class="rounded-circle" height="30" width="30">
+                                    </div>
+    
+                                    <div class="col-7 infoAmici mt-1">
+                                            <p id="titolo2" class="fw-bold">lightdark02</p>
+                                            <p class="mb-2">Aimed to Kill . Jade LeMac</p>
+                                            <p><i class="bi bi-pause-circle"></i> Aimed to Kill</p>
+                                        </div>
+    
+                                        <div class="col-2 durataAmici p-0 text-end">
+                                            <p>8 ore</p>
+                                        </div>
+                                    </div>
+                                    <div class="col"></div>
+                                    <div class="col"></div>
+                                </div>
+
+                                <div class="row d-flex">
+
+                                    <div class="col-2">
+                                        
+                                            <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="profile pic" class="rounded-circle" height="30" width="30">
+                                    </div>
+    
+                                    <div class="col-7 infoAmici mt-1">
+                                            <p id="titolo3" class="fw-bold">Valeria Traverso</p>
+                                            <p class="mb-2">New Kings . Sleeping Wolf</p>
+                                            <p> <i class="bi bi-music-note-beamed"></i> Twint Badass mood</p>
+                                        </div>
+    
+                                        <div class="col-2 durataAmici p-0 text-end">
+                                            <p>3 giorni</p>
+                                        </div>
+                                    </div>
+                                    <div class="col"></div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                            
+                       </section>
  
 
 </div>
     
-        <footer class="bgGray d-flex " style="width: 100%; height: 12dvh;">
-            <div class="col-3">
-                <div class="d-flex bannerCanzone text-white p-0 align-items-center">
-                    <div id="albumCoverBtm" class="me-3"><img src="assets/imgs/main/image-15.jpg"></div>
-                    <div>
-                        <div id="songNameBtm"><p class=" fw-bold mb-0 mt-2">Testo riempitivo</p></div>
-                        <div id="artistNameBtm"><p class="fs-7">Testo riempitivo</p></div>
-                    </div>
-                    <i class="bi bi-heart text-white p-4 ms-2 fs-5 btn border-0"></i>
-                </div>
+
+<!-- Footer -->
+<footer class="bgGray d-flex d-flex justify-content-center align-items-center" style="width: 100%; height: 12vh;">
+    <div class="col-3 ms-5"> <!--ALBUM IN RIPRODUZIONE-->
+        <div class="d-flex bannerCanzone text-white ps-3 align-items-center">
+            <div id="albumCoverBtm" class="me-3"><img src="assets/imgs/main/image-15.jpg"></div>
+            <div>
+                <div id="songNameBtm"><p class=" fw-bold mb-0">Testo riempitivo</p></div>
+                <div id="artistNameBtm"><p class="fs-7 m-0">Testo riempitivo</p></div>
             </div>
-            <div class="col-6 text-center">
-                <div class="d-flex justify-content-center align-items-center">
-                    <i class="bi bi-shuffle greenSpo ophow"></i>
-                    <i class="bi bi-skip-start-fill fs-3 btn text-white ophow border-0"></i>
-                    <i class="bi bi-play-circle-fill fs-2 btn text-white ophow border-0 px-0"></i>
-                    <i class="bi bi-skip-end-fill fs-3 btn text-white ophow border-0"></i>
-                    <i class="bi bi-repeat greenSpo ophow"></i>
-                </div> 
-                <div class="d-flex text-secondary align-items-center justify-content-center " style="box-sizing: content-box;";>
-                    <p>0:58</p>
-                    <div class="progress  my-0 mx-2 bg-secondary" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 70%; height: 7px;">
-                        <div class="progress-bar bg-secondary-subtle" style="width: 25%"></div>
-                      </div>
-                    <p>3:20</p>
-                </div>
+            <i class="bi bi-heart text-white px-4 ms-2 fs-5 btn border-0"></i>
+        </div>
+    </div>
+    <div class="col-6 text-center"> <!--PLAYER-->
+        <div class="d-flex justify-content-center align-items-center">
+            <i class="bi bi-shuffle greenSpo ophow"></i>
+            <i class="bi bi-skip-start-fill fs-3 btn text-white ophow border-0"></i>
+            <i class="bi bi-play-circle-fill fs-2 btn text-white ophow border-0 p-0"></i>
+            <i class="bi bi-skip-end-fill fs-3 btn text-white ophow border-0"></i>
+            <i class="bi bi-repeat greenSpo ophow"></i>
+        </div> 
+        <div class="d-flex text-secondary align-items-center justify-content-center p-0">
+            <span class="m-0 p-0">0:58</span>
+            <div class="progress bg-secondary mx-2" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 70%; height: 7px;">
+                <div class="progress-bar bg-secondary-subtle" style="width: 25%"></div>
+              </div>
+            <span class="m-0 p-0">3:20</span>
+        </div>
+    </div>
+    <div class="col-3 d-flex d-flex justify-content-end me-5"> <!--MENU-->
+        <i class="bi bi-mic text-white fs-5 me-3 opacity-75 btn btn-outline-secondary border-0 rounded-5"></i>
+        <i class="bi bi-menu-button-wide text-white fs-5 me-3 opacity-75 btn btn-outline-secondary border-0 rounded-5"></i>
+        <i class="bi bi-pc-display text-white fs-5 me-3 opacity-75 btn btn-outline-secondary border-0 rounded-5"></i>
+        <div class="volume">
+            <input type="range" min="0" max="100" value="50" class="volume-range">
+            <div class="icon">
+              <i class="bi bi-volume-up text-white fs-5 me-2 opacity-75 btn btn-outline-secondary border-0 rounded-5" aria-hidden="true"></i>
             </div>
-            <div class="col-3">
+            <div class="bar-hoverbox">
+              <div class="bar">
+                <div class="bar-fill"></div>
+              </div>
             </div>
-        </footer>
+          </div>
+        <i class="bi bi-arrows-angle-expand text-white fs-5 me-2 opacity-75 btn btn-outline-secondary border-0 rounded-5"></i>
+    </div>
+</footer>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script> //amici
+    document.addEventListener('DOMContentLoaded', () => {
+        let closeButton = document.querySelector('#closeBtn');
+        closeButton.addEventListener('click', () => {
+            let section = document.querySelector('#sectionAmici');
+            section.style.display = 'none';
+        })
+    })
+    
+    // footer
+    document.addEventListener('DOMContentLoaded', function() {
+        function replaceHeartIcon() {
+            const heartIcon = document.querySelector('.bi-heart');
+            const filledHeartIcon = document.createElement('i');
+            filledHeartIcon.classList.add('bi', 'bi-heart-fill');
+            
+            heartIcon.parentNode.replaceChild(filledHeartIcon, heartIcon);
+          }
+      });
+    
+</script>
+   
 </body>
 </html>
