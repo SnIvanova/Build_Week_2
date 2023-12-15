@@ -10,14 +10,16 @@
    <!-- favicon -->
     <link rel="shortcut icon" href="./assets/favicon/spotify_alt_macos_bigsur_icon_189704.png">
 
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <!-- stylesheets -->
     <link rel="stylesheet" href="./assets/css/circular-font.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
      <!-- java -->
-    <script src="./js/script.js"></script>
+    
 
     <title>Spotify</title>
 </head>
@@ -132,13 +134,25 @@
 
 
 <!-- CenterPart -->
-        <div class="col bg-dark p-0" style="height: 90%;">
-            <iframe src="home.html" style="height: 100%; width: 100%;"></iframe>
-        </div>
+<div class="col home">
 
-<!-- RightPart -->
-        <div class="col-2 p-0" style="height: 90%;">
-            </div>
+    <nav class="d-flex justify-content-between align-items-center">
+        <div><i class="bi bi-arrow-left-short text-secondary btn rounded-5 px-2 py-0 fs-3 border-0 my-3 me-2"></i><i class="bi bi-arrow-right-short text-secondary btn rounded-5 px-2 py-0 fs-3 border-0 my-3"></i></div>
+        <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle rounded-5 text-white pe-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/imgs/main/image-1.jpg" alt="profile" style="width: 40px;" class="rounded-circle">Lidia Nautilus...
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item text-white" href="#">Condividi Profilo</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Crea una playlist</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Logout</a></li>
+                </ul>
+        </div>
+    </nav>
+
+</div>
+
+
 
  <!-- amici -->
             <section id="sectionAmici" class="col-2 p-0 text-white ms-2 d-none d-md-block">
@@ -227,7 +241,7 @@
                        </section>
  
 
-</div>
+
     
 
 <!-- Footer -->
@@ -280,27 +294,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script> //amici
-    document.addEventListener('DOMContentLoaded', () => {
-        let closeButton = document.querySelector('#closeBtn');
-        closeButton.addEventListener('click', () => {
-            let section = document.querySelector('#sectionAmici');
-            section.style.display = 'none';
-        })
-    })
-    
-    // footer
-    document.addEventListener('DOMContentLoaded', function() {
-        function replaceHeartIcon() {
-            const heartIcon = document.querySelector('.bi-heart');
-            const filledHeartIcon = document.createElement('i');
-            filledHeartIcon.classList.add('bi', 'bi-heart-fill');
-            
-            heartIcon.parentNode.replaceChild(filledHeartIcon, heartIcon);
-          }
-      });
-    
-</script>
-   
+    <script src="./js/script.js"></script>
 </body>
 </html>
