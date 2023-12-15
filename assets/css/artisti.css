@@ -1,0 +1,170 @@
+/* Parte Generale di Pierpaolo e Luca */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #a19e9e;
+}
+
+.dropdown-item:hover {
+    background-color: #313131;
+}
+
+/* Parte Generale di Ivanova e Xoana */
+
+/* Amici */
+#dash, #window, #cross  {
+    font-size: 0.5rem;
+}
+
+.utentiAmici {
+    font-size: 1rem;
+}
+
+#titolo1, #titolo2, #titolo3 {
+    font-size: 0.6rem;
+}
+
+.infoAmici  {
+    font-size: 0.5rem;
+    line-height: 0rem;
+}
+
+.durataAmici {
+    font-size: 0.5rem;
+}
+
+.iconeAttivita, .infoAmici, .durataAmici{
+    color: #a8a8a8;
+}
+
+.amiciBtn, #closeBtn {
+    background-color: black;
+}
+
+.amiciBtn:hover, #closeBtn:hover {
+    background-color: #a8a8a8;
+    border-radius: 50px;
+}
+
+/* Parte Generale di Vito E Francesco */
+
+/* FOOTER */
+
+.bgGray {
+    background-color: #181818;
+}
+
+.ophow:hover {
+    opacity: 0.8;
+    animation-duration: 3ms;
+}
+
+.greenSpoBg {
+    background-color: #1ED760;
+}
+
+.greenSpo {
+    color: #1ED760;
+}
+
+#albumCoverBtm img {
+    width: 8dvh;
+}
+
+.fs-7 {
+    font-size: 0.75rem;
+}
+
+.volume {
+    input[type=range] {
+      display: none;
+    }
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .icon-size {
+      font-size: 2rem;
+    }
+    
+    .bar-hoverbox {
+      padding: 10px 15px;
+      opacity: 0.7;
+      transition: opacity .2s;
+      
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+    
+    .bar {
+      background: #999;
+      height: 7px;
+      width: 120px;
+      border-radius: 15px;
+      overflow: hidden;
+      pointer-events: none;
+      
+      .bar-fill {
+        background: #FFF;
+        width: 0%;
+        height: 100%;
+        background-clip: border-box;
+        pointer-events: none;
+      }
+    }
+  }
+
+/* Artist */
+
+.artist .BackgroundArtist {
+    background-color: #1ED760;
+}
+
+.artist {
+    background: rgb(46,46,46);
+    background: -moz-linear-gradient(180deg, rgba(46,46,46,1) 0%, rgba(18,18,18,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(46,46,46,1) 0%, rgba(18,18,18,1) 100%);
+    background: linear-gradient(180deg, rgba(46,46,46,1) 0%, rgba(18,18,18,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2e2e2e",endColorstr="#121212",GradientType=1);
+}
+
+.bi-arrow-left-short, .bi-arrow-right-short, .dropdown-toggle, .dropdown-menu {
+    background-color: #131313;
+}
+
+.bi-arrow-left-short:hover, .bi-arrow-right-short:hover {
+    background-color: #131313;
+    opacity: 0.6;
+}
+
+#containerScritteArtista .row .col + p{
+    font-size: 2em;
+}
+
+#containerScritteArtista .row .col h1{
+    font-size: 5em;
+    font-weight: bolder;
+    height: fit-content;
+}
+
+#immagineArtistaCerchiata{
+    width: 15%;
+    height: 15%;
+}
+
+.imageWidth{
+    width: 100%;
+    height: 100%;
+}
