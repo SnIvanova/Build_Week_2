@@ -120,20 +120,14 @@ function createPlaylist (a) {
         console.log(arrayPlaylist);
     }
 }
+ //amici
 
-
-
-document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
     createPlaylist(arrayPlaylist);
-    //amici
-
     let closeButton = document.querySelector('#closeBtn');
-    console.log(closeButton);
     closeButton.addEventListener('click', () => {
+        console.log('click');
         let section = document.querySelector('#sectionAmici');
-        section.style.display = 'none';
+        section.parentNode.removeChild(section);
     })
-
-
-
 });

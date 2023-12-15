@@ -14,7 +14,7 @@
     background-color: #131313;
 }
 
-.bi-arrow-left-short:hover, .bi-arrow-right-short:hover, {
+.bi-arrow-left-short:hover, .bi-arrow-right-short:hover {
     background-color: #131313;
     opacity: 0.6;
 }
