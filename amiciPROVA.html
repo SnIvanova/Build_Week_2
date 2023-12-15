@@ -28,21 +28,8 @@
                 <div class="col bg-dark p-0" style="height: 100%;">
                     <iframe src="home.html" style="height: 100%; width: 100%;"></iframe>
                 </div>
-
-
-
-
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-people"></i></button>
-
-                <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
                     
-                    
-                    <section class="col-2 p-0 text-white ms-2">
+                    <section id="sectionAmici" class="col-2 p-0 text-white ms-2 d-none d-md-block">
                         <div >
                            <div>
                                <div class="icone d-flex justify-content-end">
@@ -57,8 +44,8 @@
                                        <h6 class="mb-0">Attività amici</h6>
                                    </div>
                                    <div class="mb-2 text-white-50">
-                                       <i class="bi bi-person-add fs-5"></i> 
-                                       <i class="bi bi-x-lg fs-5 ms-1"></i>
+                                       <button class="amiciBtn border-0 text-white-50 "><i class="bi bi-person-add fs-5"></i> </button>
+                                      <button id="closeBtn" class=" border-0 text-white-50 ps-0"> <i  class="bi bi-x-lg fs-5 ms-1"></i> </button> 
                                    </div>
                                </div>
                             </div>
@@ -151,5 +138,18 @@
         </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        let closeButton = document.querySelector('#closeBtn');
+        closeButton.addEventListener('click', () => {
+            let section = document.querySelector('#sectionAmici');
+            section.style.display = 'none';
+        })
+    })
+
+
+
+        </script>
 </body>
 </html>

@@ -23,5 +23,14 @@
     color: #a8a8a8;
 }
 
+.amiciBtn, #closeBtn {
+    background-color: black;
+}
+
+.amiciBtn:hover, #closeBtn:hover {
+    background-color: #a8a8a8;
+    border-radius: 50px;
+}
+
 
 
