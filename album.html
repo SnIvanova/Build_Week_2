@@ -19,9 +19,8 @@
     
     <title>Album Spotify</title>
 </head>
-<body>
-    
-    <body class="bg-black">
+
+<body class="bg-black">
 
      
         <div class="container-fluid"  >
@@ -277,7 +276,7 @@
     <footer class="bgGray d-flex d-flex justify-content-center align-items-center sticky-bottom" style="width: 100%; height: 12vh;">
         <div class="col-3 ms-5"> <!--ALBUM IN RIPRODUZIONE-->
             <div class="d-flex bannerCanzone text-white ps-3 align-items-center">
-                <div id="albumCoverBtm footer" class="me-3"><img class="footerImg" src=""></div>
+                <div id="albumCoverBtm" class="me-3"><img class="footerImg" src=""></div>
                 <div>
                     <div id="songNameBtm"><p class=" fw-bold mb-0">Testo riempitivo</p></div>
                     <div id="artistNameBtm"><p class="fs-7 m-0">Testo riempitivo</p></div>
@@ -294,11 +293,11 @@
                 <i class="bi bi-repeat greenSpo ophow"></i>
             </div> 
             <div class="d-flex text-secondary align-items-center justify-content-center p-0">
-                <span class="m-0 p-0">0:58</span>
-                <div class="progress bg-secondary mx-2" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 70%; height: 7px;">
-                    <div class="progress-bar bg-secondary-subtle" style="width: 25%"></div>
-                  </div>
-                <span class="m-0 p-0">3:20</span>
+                <span id="currentTime">0:00</span>
+                    <div class="progress bg-secondary mx-2" role="progressbar" aria-label="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 70%; height: 7px;">
+                        <div class="progress-bar bg-secondary-subtle" style="width: 0%;" id="progressBar"></div>
+                    </div>
+                <span id="duration">0:00</span>
             </div>
         </div>
         <div class="col-3 d-flex d-flex justify-content-end me-5"> <!--MENU-->
