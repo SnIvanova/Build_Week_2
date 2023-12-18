@@ -155,6 +155,76 @@ async function getIdBanner() {
 
 getIdBanner();
 
+//FUNZIONI CREAZIONE PLAYLISTS
+/* function createPlaylist(playlist) { //CREATORE DI CARD
+  const card = document.createElement("div"); // contenitore banner
+  card.classList.add("col-4", "p-0", "m-0", "d-flex", "justify-content-center");
+
+  card.innerHTML= `
+  <div class="d-flex bg-secondary bg-opacity-25 rounded-1 text-white fw-bold align-items-center my-2 p-0" style="width: 95%;">
+  <div class="playlistImgs me-3 rounded-start-3">
+      <div class="row p-0 m-0">
+          <img src="${album.cover}" alt="" style="width: 4dvh" class="p-0 m-0 rounded-top-1 rounded-end-0">
+          <img src="${album.cover}" alt="" style="width: 4dvh" class="p-0 m-0">
+      </div>
+      <div class="row p-0 m-0">
+          <img src="${album.cover}" alt="" style="width: 4dvh" class="p-0 m-0 imgAngolo">
+          <img src="${album.cover}" alt="" style="width: 4dvh" class="p-0 m-0">
+      </div>
+  </div>
+  <p class="p-0 m-0">Titolo della playlist</p>
+</div>
+  `;
+
+  let deleteBannerBtn = card.querySelector('#buttonHeaderHome');
+
+  deleteBannerBtn.addEventListener('click', () => {
+    // Check if the header exists before trying to hide it
+    let headerElement = document.querySelector('header');
+    if (headerElement) {
+      headerElement.style.display = "none";
+    }
+  });
+
+  return card;
+}
+
+function displayPlaylist(playlist) {
+  const playlistContainer = document.querySelector(".plscnt");
+
+  const plstbnr = createPlaylist(playlist);
+  playlistContainer.appendChild(plstbnr);
+}
+
+async function getIdPlaylist() {
+  function getRandomId(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  let albumId = getRandomId(302127, 302227);
+
+  
+    try {
+      const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await response.json();
+
+      if (data.cover) {
+        displayPlaylist(data);
+      }
+    } catch (error) {
+      console.error("Errore durante il recupero dei dati:", error);
+    }
+  
+}
+
+getIdPlaylist(); */
+
 
 }}); //CHIUSURA CONTENT LOAD E IF 
 
