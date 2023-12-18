@@ -34,7 +34,7 @@ function displayAlbumData(albumData) {
   table.classList.add('table', 'table-dark');
 
   const headerRow = table.createTHead().insertRow();
-  headerRow.innerHTML = '<th scope="col">#</th><th scope="col">Title</th><th scope="col">Duration</th><th scope="col"><i class="bi bi-clock"></i></th>';
+  headerRow.innerHTML = '<th scope="col" class="col-1">#</th><th scope="col"  class="col-6">Title</th><th scope="col"  class="col-2">Riproduzioni</th><th scope="col" class="col-1"><i class="bi bi-clock"></i></th>';
 
   const tbody = table.createTBody();
 
@@ -44,15 +44,24 @@ function displayAlbumData(albumData) {
   tracks.forEach((track, index) => {
     console.log('ms:', track.duration);
     const row = tbody.insertRow();
-    row.innerHTML = `<td>${index + 1}</td><td>${track.title}</td><td>${msToMinutesAndSeconds(track.duration)}</td><td>${track.rank}</td>`;
+    row.innerHTML = `<td>${index + 1}</td><td>${track.title}</td><td>${Rankcalc(track.rank)}</td><td>${msToMinutesAndSeconds(track.duration)}</td>`;
   });
 
   albumTable.appendChild(table);
 }
 
+
+function Rankcalc(rank) {
+  const numRank = parseFloat(rank);
+  return numRank.toLocaleString();
+}
+
+
 function msToMinutesAndSeconds(ms) {
-  const minutes = Math.floor(ms / 60000);
-  const seconds = Math.floor((ms % 60000) / 1000);
+  const minutes = Math.floor(ms / 60);
+  const seconds = Math.floor(ms % 60);
   console.log('minutes:', minutes, 'seconds:', seconds);
-  return `${minutes}:${(seconds < 10 ? '0' : '')}${seconds}`;
+
+  return (
+    seconds === 60? (minutes + 1) + ":00": minutes + ":" + (seconds < 10 ? "0" : "") + seconds);
 }
