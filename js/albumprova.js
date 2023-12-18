@@ -23,6 +23,32 @@ async function fetchAlbumData() {
 }
 
 function displayAlbumData(albumData) {
+  const albumContainer = document.querySelector('#albumContainer');
+
+  if (!albumContainer) {
+    console.error('ID "albumContainer" not found.');
+    return;
+  }
+
+  const albumInfoDiv = document.createElement('div');
+  albumInfoDiv.classList.add('album-info');
+  albumInfoDiv.classList.add('d-flex');
+  albumInfoDiv.classList.add('align-items-center');
+
+
+
+  const albumImage = document.createElement('img');
+  albumImage.src = albumData.cover_medium;
+  
+  albumImage.alt = albumData.title;
+  albumInfoDiv.appendChild(albumImage);
+
+  const albumTitle = document.createElement('h2');
+  albumTitle.textContent = albumData.title;
+  albumInfoDiv.appendChild(albumTitle);
+  albumContainer.appendChild(albumInfoDiv);
+
+
   const albumTable = document.querySelector('#albumData');
 
   if (!albumTable) {
