@@ -73,7 +73,6 @@ function createAlbumBanner(album) { //CREATORE DI CARD
   card.classList.add("d-flex", "rounded-1");
 
   card.innerHTML= `
-                      <div class="d-flex rounded-1">
                         <img src="${album.cover}" alt="album_cover" class="my-4 mx-3" style="height: 200px;">
                         <div class="text-white my-3 me-3" style="width: 100%;">
                             <div class="d-flex justify-content-between">
@@ -105,8 +104,17 @@ function createAlbumBanner(album) { //CREATORE DI CARD
                                 </div>
                             </nav>
                             <p class="d-none">${album.id}</p>
-                        </div>
   `;
+
+  let deleteBannerBtn = card.querySelector('#buttonHeaderHome');
+
+  deleteBannerBtn.addEventListener('click', () => {
+    // Check if the header exists before trying to hide it
+    let headerElement = document.querySelector('header');
+    if (headerElement) {
+      headerElement.style.display = "none";
+    }
+  });
 
   return card;
 }
@@ -119,7 +127,11 @@ function displayBanner(album) {
 }
 
 async function getIdBanner() {
-  let albumId = 302127;
+  function getRandomId(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  let albumId = getRandomId(302127, 302227);
 
   
     try {
@@ -135,8 +147,6 @@ async function getIdBanner() {
       if (data.cover) {
         displayBanner(data);
       }
-
-      albumId++;
     } catch (error) {
       console.error("Errore durante il recupero dei dati:", error);
     }
@@ -144,6 +154,7 @@ async function getIdBanner() {
 }
 
 getIdBanner();
+
 
 }}); //CHIUSURA CONTENT LOAD E IF 
 
