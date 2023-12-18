@@ -34,7 +34,7 @@ function displayAlbumData(albumData) {
   table.classList.add('table', 'table-dark');
 
   const headerRow = table.createTHead().insertRow();
-  headerRow.innerHTML = '<th scope="col" class="col-1">#</th><th scope="col"  class="col-6">Title</th><th scope="col"  class="col-2">Rating</th><th scope="col" class="col-1"><i class="bi bi-clock"></i></th>';
+  headerRow.innerHTML = '<th scope="col" class="col-1">#</th><th scope="col"  class="col-6">Title</th><th scope="col"  class="col-2">Riproduzioni</th><th scope="col" class="col-1"><i class="bi bi-clock"></i></th>';
 
   const tbody = table.createTBody();
 
