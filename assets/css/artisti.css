@@ -129,7 +129,11 @@
 /* Artist */
 
 .artist .BackgroundArtist {
-    background-color: #1ED760;
+    /* background-color: #000000b4; */
+}
+
+#sfumato {
+    background-color: #000000a5;
 }
 
 .artist {

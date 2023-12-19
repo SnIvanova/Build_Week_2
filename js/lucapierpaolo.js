@@ -1,8 +1,10 @@
 // Playlist Colonna SX
 
-let playlistUL = document.querySelector(".overflow-auto");
+document.addEventListener("DOMContentLoaded", () => {
 
-let arrayPlaylist = ["Playlist bella", "I grandi succesi"]; // Contenuto ricavato dalle API
+    let playlistUL = document.querySelector(".overflow-auto");
+
+let arrayPlaylist = ["Preferite!", "Dimmi Gianluca...!", "Longo Trading Vibes", "Petrella Background boost", "Playlist bella", "I grandi succesi", "Britney Spiars", "Chill music per coding andato male", "Gaming", "OST film e videogiochi", "Machine", "Badass Villain Vibes!", "Chill beats", "Japanese Lo-Fi Chillhop", "White noise for Silvia", "Lo-Fi music Fruits", "Chillout 2024", "Umberto boost music", "Galasso waves", "Christmas chill music", "Tutti frutti all Zucchi", "Pacchettone chillout", "Sigma Ponk Mix '23", "Nightcore", "Gerry Christmas", "Tamarri in macchina", "Coding music", "Fitness boost", "Mariah al Curry", ""];
 
 console.log(arrayPlaylist)
 
@@ -15,7 +17,7 @@ function createPlaylist (a) {
     for (let i=0; i<a.length; i++) {
         
         let playLi = document.createElement("li");
-        playLi.className = "text-white-50 fs-6 list-unstyled";
+        playLi.className = "text-white-50 fs-6 list-unstyled btn";
         playLi.innerText = a[i];
         playlistUL.appendChild(playLi);
 
@@ -24,3 +26,5 @@ function createPlaylist (a) {
 }
 
 createPlaylist(arrayPlaylist);
+});
+
