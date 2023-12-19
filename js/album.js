@@ -36,19 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Error Status:', response.status, response.statusText);
         const errorResponse = await response.json();
         console.error('Error Response:', errorResponse);
-        throw new Error(`Error Status: ${response.status} ${response.statusText}`);
       }
   
       const responseData = await response.json();
   
       if (responseData.error) {
         console.error('API Error:', responseData.error.message);
-        throw new Error(`API Error: ${responseData.error.message}`);
       }
   
       if (!responseData.tracks || !responseData.tracks.data) {
         console.error('Invalid album data: Missing tracks data');
-        throw new Error('Invalid album data: Missing tracks data');
       }
   
       displayAlbumData(responseData);
@@ -60,12 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
 function displayAlbumData(albumData) {
+  const homeContainer = document.querySelector('#home');
   const albumContainer = document.querySelector('#albumContainer');
 
   if (!albumContainer) {
     console.error('ID "albumContainer" not found.');
     return;
   }
+  if (!homeContainer) {
+    console.error('ID "home" not found.');
+    return;
+}
 
   if (!albumData || !albumData.tracks || !albumData.tracks.data) {
     console.error('Invalid album data:', albumData);
@@ -76,15 +78,90 @@ function displayAlbumData(albumData) {
   albumInfoDiv.classList.add('album-info', 'd-flex', 'align-items-center');
 
   const albumImage = document.createElement('img');
+  albumImage.crossOrigin = 'Anonymous';
   albumImage.src = albumData.cover_medium;
   albumImage.alt = albumData.title;
+
+
+  const colorThiefPromise = new Promise((resolve) => {
+    albumImage.addEventListener('load', function () {
+        const colorThief = new ColorThief();
+        const colorPalette = colorThief.getPalette(albumImage, 10); // Increase the number of colors
+
+        // Ensure the color palette is not empty
+        if (colorPalette && colorPalette.length > 0) {
+            // Sort the colors by brightness
+            colorPalette.sort((color1, color2) => {
+                // Calculate brightness: (0.299*R + 0.587*G + 0.114*B)
+                const brightness1 = 0.299 * color1[0] + 0.587 * color1[1] + 0.114 * color1[2];
+                const brightness2 = 0.299 * color2[0] + 0.587 * color2[1] + 0.114 * color2[2];
+                return brightness2 - brightness1; // Sort in descending order
+            });
+
+            resolve(colorPalette);
+        } else {
+            console.error('Empty or invalid color palette');
+            resolve(null);
+        }
+    });
+});
+
+colorThiefPromise.then((colorPalette) => {
+    if (colorPalette) {
+        console.log('Color Palette:', colorPalette);
+
+        const gradientColors = generateGradientColors(colorPalette, 10);
+
+        if (gradientColors && gradientColors.length > 0) {
+            console.log('Gradient Colors:', gradientColors);
+            homeContainer.style.backgroundImage = `linear-gradient(to bottom, ${gradientColors.join(', ')})`;
+           // const albumDataContainer = document.getElementById('albumData');
+            //albumDataContainer.style.backgroundImage = `linear-gradient(to bottom, ${gradientColors.join(', ')})`;
+            //const albumTable = document.querySelector('.table-dark');
+            //albumTable.style.backgroundImage = `linear-gradient(to bottom, ${gradientColors.join(', ')})`;
+        } else {
+            console.error('Empty or invalid gradient colors');
+        }
+    }
+});
+
+function generateGradientColors(colorPalette, steps) {
+    const gradientColors = [];
+    
+    if (colorPalette && colorPalette.length > 0) {
+        const stepSize = 1 / (steps - 1);
+
+        for (let i = 0; i < steps; i++) {
+            const blendFactor = i * stepSize;
+            const blendedColor = colorPalette.reduce((acc, cur) => {
+                return acc.map((channel, index) => {
+                    return Math.round(channel + (cur[index] - channel) * blendFactor);
+                });
+            });
+
+            gradientColors.push(`rgb(${blendedColor.join(',')})`);
+        }
+    } else {
+        console.error('Empty or invalid color palette in generateGradientColors');
+    }
+
+    return gradientColors;
+}
+
+  
+
+
   albumInfoDiv.appendChild(albumImage);
 
   const textInfoDiv = document.createElement('div');
-  textInfoDiv.classList.add('p-3');
+  textInfoDiv.classList.add('p-3', 'col', 'align-self-end');
+  textInfoDiv.textContent = 'Album'
   albumInfoDiv.appendChild(textInfoDiv);
 
+
+
   const albumTitle = document.createElement('h1');
+  albumTitle.classList.add('strong');
   albumTitle.textContent = albumData.title;
   textInfoDiv.appendChild(albumTitle);
 
@@ -103,8 +180,9 @@ function displayAlbumData(albumData) {
   }
 
   const table = document.createElement('table');
-  table.classList.add('table', 'table-dark');
-
+  table.classList.add('text-light', 'text-opacity-75');
+  table.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+  table.style.width = '100%';
   const headerRow = table.createTHead().insertRow();
   headerRow.innerHTML = '<th scope="col" class="col-1">#</th><th scope="col" class="col-6">Title</th><th scope="col" class="col-2">Riproduzioni</th><th scope="col" class="col-1"><i class="bi bi-clock"></i></th>';
 

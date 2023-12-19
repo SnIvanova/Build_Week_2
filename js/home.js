@@ -43,8 +43,9 @@ function displayAlbum(album) {
 
 async function getIdAPI() {
   let albumId = 302127;
+  let cardsFound = 0;
 
-  for (let i = 0; i <= 16; i++) {
+  while (cardsFound < 15) {
     try {
       const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`, {
         method: "GET",
@@ -57,9 +58,8 @@ async function getIdAPI() {
 
       if (data.cover) {
         displayAlbum(data);
-      }
-
-      albumId++;
+        cardsFound++;}
+        albumId++;
       await new Promise(resolve => setTimeout(resolve, 200));
     } catch (error) {
       console.error("Errore durante il recupero dei dati:", error);
@@ -135,7 +135,9 @@ async function getIdBanner() {
 
   let albumId = getRandomId(302127, 302227);
 
-  
+  let cardsFound = 0;
+
+  while (cardsFound < 1) {
     try {
       const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`, {
         method: "GET",
@@ -147,17 +149,17 @@ async function getIdBanner() {
       const data = await response.json();
 
       if (data.cover) {
-        displayBanner(data);
-      }
-      albumId++;
+      displayBanner(data);
+      cardsFound++;}
+        albumId++;
       await new Promise(resolve => setTimeout(resolve, 100));
     } catch (error) {
       console.error("Errore durante il recupero dei dati:", error);
     }
-  
+  }
 }
 
-getIdBanner();
+/* getIdBanner(); */
 
 //FUNZIONI CREAZIONE PLAYLISTS
 function createPlaylist(album) { //CREATORE DI CARD
@@ -189,10 +191,10 @@ async function getIdPlaylist() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  let playlistId = getRandomId(302127, 302227);
+  let playlistId = getRandomId(302127, 302230);
+  let cardsFound = 0;
 
-  
-  for (let i = 0; i <= 6; i++) {
+  while (cardsFound < 6)  {
     try {
       const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${playlistId}`, {
         method: "GET",
@@ -205,6 +207,7 @@ async function getIdPlaylist() {
 
       if (data.cover) {
         displayPlaylist(data);
+        cardsFound++;
       }
 
       playlistId++;
@@ -215,7 +218,7 @@ async function getIdPlaylist() {
   }
 }
 
-getIdPlaylist().then(getIdAPI);
+getIdBanner().then(getIdPlaylist).then(getIdAPI);
 
 
 }}); //CHIUSURA CONTENT LOAD E IF 
