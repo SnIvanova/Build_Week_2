@@ -29,9 +29,9 @@
             <div class="row g-0" style="height: 88dvh;">
     
                 <!-- LeftPart -->
-                    <div class="col-3 p-0"  style="height: 100%;">
+                    <div class="col-md-3 p-0 d-none d-md-block"  style="height: 100%;">
                         <div class="container-fluid" style="height: 100%;">
-                            <div class="row" style="height: 5%;">
+                            <div class="row " style="height: 5%;">
                                 <div class="col-12">
                                     <div class="dropdown mt-2" style="margin-left: -2px;">
                                         <button class="btn text-white bg-black" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,7 +65,7 @@
                                     </div>
                                 </div>
     
-                                <div class="row mt-3" style="height: 50%;">
+                                <div class="row mt-3 d-none d-md-block" style="height: 50%;">
                                     <div class="col-12 d-flex align-items-end">
                                         <h5 class="text-white h4">
                                         <a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center">
@@ -87,7 +87,7 @@
                                 </div>
                             </div>
                         
-                                <div class="row" style="height: 58%;">
+                                <div class="row d-none d-md-block" style="height: 58%;">
                                     <div class="col-12" style="height: 100%;">
                                         <ul class="p-0 mt-4 overflow-auto"   style="height: 100%">
                                             <li class="text-white-50 fs-6 list-unstyled">Phfbdsjfgjsd</li>
@@ -304,7 +304,7 @@
                 <span id="duration">0:00</span>
             </div>
         </div>
-        <div class="col-3 d-flex d-flex justify-content-end me-5"> <!--MENU-->
+        <div class="col-3 d-flex d-flex justify-content-end me-5 "> <!--MENU-->
             <i class="bi bi-mic text-white fs-5 me-3 opacity-75 btn btn-outline-secondary border-0 rounded-5"></i>
             <i class="bi bi-menu-button-wide text-white fs-5 me-3 opacity-75 btn btn-outline-secondary border-0 rounded-5"></i>
             <i class="bi bi-pc-display text-white fs-5 me-3 opacity-75 btn btn-outline-secondary border-0 rounded-5"></i>
@@ -322,6 +322,30 @@
             <i class="bi bi-arrows-angle-expand text-white fs-5 me-2 opacity-75 btn btn-outline-secondary border-0 rounded-5"></i>
         </div>
     </footer>
+    <!-- Bottom Content for Little and Medium Screens -->
+    <div class="container-fluid d-md-none">
+        <div class="row" style="height: 5%;">
+            <div class="col-12">
+                <div style="height: 30%">
+                    <div class="row" style="height: 50%;">
+                        <div class="col-12 d-flex align-items-end">
+                            <h5 class="text-white h4 mb-0 lh-1"><a href="index.html" class="text-white text-decoration-none fs-6 d-flex align-items-center h4 mb-0"><i class="bi bi-house-door-fill fs-5 pe-3"></i>Home</a></h5>
+                        </div>
+                        <div class="col-12 d-flex align-items-center">
+                            <h5 class="text-white h4 mb-0 lh-1">
+                            <a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center">
+                            <i class="bi bi-search fs-5 pe-3">
+                            </i>Cerca</a></h5>
+                        </div>
+                        <div class="col-12 d-flex align-items-start">
+                            <h5 class="text-white h4 mb-0 lh-1">
+                            <a href="#" class="text-white text-decoration-none fs-6 d-flex align-items-center">
+                            <i class="bi bi-collection fs-5 pe-3">
+                            </i>La tua libreria</a></h5>
+                        </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
