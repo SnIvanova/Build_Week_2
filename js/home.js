@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  if (window.location.pathname.includes('home.html')) {
+  if (window.location.pathname.includes('index.html')) {
 
   // Funzione che crea un elemento card
   function createAlbumCard(album) { //CREATORE DI CARD
@@ -60,13 +60,14 @@ async function getIdAPI() {
       }
 
       albumId++;
+      await new Promise(resolve => setTimeout(resolve, 200));
     } catch (error) {
       console.error("Errore durante il recupero dei dati:", error);
     }
   }
 }
 
-getIdAPI();
+/* getIdAPI(); */
 
 //FUNZIONE PER CREAZIONE BANNER PUBBLICITARIO
 function createAlbumBanner(album) { //CREATORE DI CARD
@@ -74,7 +75,7 @@ function createAlbumBanner(album) { //CREATORE DI CARD
   card.classList.add("d-flex", "rounded-1");
 
   card.innerHTML= `
-                        <img src="${album.cover}" alt="album_cover" class="my-4 mx-3" style="height: 200px;">
+                        <a href="album.html?id=${album.id}"><img src="${album.cover}" alt="album_cover" class="my-4 mx-3" style="height: 200px;"></a>
                         <div class="text-white my-3 me-3" style="width: 100%;">
                             <div class="d-flex justify-content-between">
                                 <p id="albumNameHomeHeader" class="fw-bold">ALBUM</p>
@@ -82,9 +83,9 @@ function createAlbumBanner(album) { //CREATORE DI CARD
                                         NASCONDI ANNUNCI
                                 </button>
                             </div>
-                            <h3 class="fs-1 fw-bold mb-0">${album.title}</h3>
+                            <a class="text-decoration-none text-white" href="album.html?id=${album.id}"><h3 class="fs-1 fw-bold mb-0">${album.title}</h3></a>
                             <p class="mt-0">${album.artist.name}</p>
-                            <p>Ascolta il nuovo singolo di <span>${album.artist.name}</span>!</p>
+                            <p>Ascolta il nuovo album di <span>${album.artist.name}</span>!</p>
                             <nav class="d-flex align-content-center">
                                 <div class="greenBtn mx-2 px-4 py-2 rounded-5 btn btn-success text-black fw-semibold">
                                     Play
@@ -148,6 +149,8 @@ async function getIdBanner() {
       if (data.cover) {
         displayBanner(data);
       }
+      albumId++;
+      await new Promise(resolve => setTimeout(resolve, 100));
     } catch (error) {
       console.error("Errore durante il recupero dei dati:", error);
     }
@@ -157,35 +160,19 @@ async function getIdBanner() {
 getIdBanner();
 
 //FUNZIONI CREAZIONE PLAYLISTS
-/* function createPlaylist(playlist) { //CREATORE DI CARD
-  const card = document.createElement("div"); // contenitore banner
-  card.classList.add("col-4", "p-0", "m-0", "d-flex", "justify-content-center");
+function createPlaylist(album) { //CREATORE DI CARD
+  const card = document.createElement("a"); // contenitore banner
+  card.href = `album.html?id=${album.id}`;
+  card.classList.add("col-4", "p-0", "m-0", "d-flex", "justify-content-center", "text-decoration-none", "text-white");
 
   card.innerHTML= `
   <div class="d-flex bg-secondary bg-opacity-25 rounded-1 text-white fw-bold align-items-center my-2 p-0" style="width: 95%;">
-  <div class="playlistImgs me-3 rounded-start-3">
-      <div class="row p-0 m-0">
-          <img src="${album.cover}" alt="" style="width: 4dvh" class="p-0 m-0 rounded-top-1 rounded-end-0">
-          <img src="${album.cover}" alt="" style="width: 4dvh" class="p-0 m-0">
-      </div>
-      <div class="row p-0 m-0">
-          <img src="${album.cover}" alt="" style="width: 4dvh" class="p-0 m-0 imgAngolo">
-          <img src="${album.cover}" alt="" style="width: 4dvh" class="p-0 m-0">
-      </div>
+  <div class="playlistImgs me-3 rounded-start-3 shadow">
+    <img src="${album.cover}" alt="" style="width: 60px; height: 60px" class="p-0 m-0">
   </div>
-  <p class="p-0 m-0">Titolo della playlist</p>
-</div>
+  <p class="p-0 m-0 ms-2">${album.title}</p>
+</div></a>
   `;
-
-  let deleteBannerBtn = card.querySelector('#buttonHeaderHome');
-
-  deleteBannerBtn.addEventListener('click', () => {
-    // Check if the header exists before trying to hide it
-    let headerElement = document.querySelector('header');
-    if (headerElement) {
-      headerElement.style.display = "none";
-    }
-  });
 
   return card;
 }
@@ -202,11 +189,12 @@ async function getIdPlaylist() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  let albumId = getRandomId(302127, 302227);
+  let playlistId = getRandomId(302127, 302227);
 
   
+  for (let i = 0; i <= 6; i++) {
     try {
-      const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`, {
+      const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${playlistId}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -218,13 +206,16 @@ async function getIdPlaylist() {
       if (data.cover) {
         displayPlaylist(data);
       }
+
+      playlistId++;
+      await new Promise(resolve => setTimeout(resolve, 100));
     } catch (error) {
       console.error("Errore durante il recupero dei dati:", error);
     }
-  
+  }
 }
 
-getIdPlaylist(); */
+getIdPlaylist().then(getIdAPI);
 
 
 }}); //CHIUSURA CONTENT LOAD E IF 
