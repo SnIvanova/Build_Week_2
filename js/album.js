@@ -180,8 +180,8 @@ function generateGradientColors(colorPalette, steps) {
   }
 
   const table = document.createElement('table');
-  table.classList.add('table', 'table-dark', 'table-hover', 'table-borderless');
-
+  table.classList.add('table', 'table-dark', 'table-hover', 'table-borderless', 'bg-opacity-light');
+  //table.style.addStyle('background-color : #21252933 ')
   const headerRow = table.createTHead().insertRow();
   headerRow.innerHTML = '<th scope="col" class="col-1">#</th><th scope="col" class="col-6">Title</th><th scope="col" class="col-2">Riproduzioni</th><th scope="col" class="col-1"><i class="bi bi-clock"></i></th>';
 
