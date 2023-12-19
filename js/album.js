@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const albumId = urlParams.get('id');
   
-    // Check if albumId is null or undefined
+    
     if (!albumId) {
       console.error('Invalid album ID:', albumId);
       return;
