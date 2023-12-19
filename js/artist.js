@@ -146,7 +146,6 @@ createPlaylist(arrayPlaylist);
     let nomeArtista = document.querySelector("#containerScritteArtista h1");
     let monthListeners = document.querySelector("#monthListeners");
     let containerCanzoni = document.querySelector("#containerCanzoni");
-    console.log(monthListeners)
 
     async function getIdArist() {
       function getRandomId(min, max) {
@@ -168,6 +167,7 @@ createPlaylist(arrayPlaylist);
           if (data.picture) {
             setArtBackground(data.picture_xl);
             setArtName(data.name);
+            setAscolti(data.nb_fan);
           }
 
         } catch (error) {
@@ -184,7 +184,12 @@ createPlaylist(arrayPlaylist);
       function setArtName (nome) {
         nomeArtista.innerText = nome;
       };
+      function setAscolti (fan){
+        monthListeners.innerText = `${fan.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")} ascoltatori mensili`;
+        
+      }
     }
+
   })
 
 
