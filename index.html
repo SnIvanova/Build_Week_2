@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/home.css">
      <!-- java -->
+     <script src="js/home.js"></script>
     
 
     <title>Spotify</title>
@@ -150,34 +151,145 @@
 
 
             <!-- CenterPart -->
-            <div class="col home">
+            <div class="col home overflow-scroll" style="height: 100%;">
 
-                <nav class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <i class="bi bi-arrow-left-short text-secondary btn rounded-5 px-2 py-0 fs-3 border-0 my-3 me-2"></i><i class="bi bi-arrow-right-short text-secondary btn rounded-5 px-2 py-0 fs-3 border-0 my-3"></i>
-                    </div>
+                <main class="col home p-4"> <!--HOME-->
 
-                    <div class="d-flex align-items-center">
-                         <div class="nav-item dropdown">
+                    <nav class="d-flex justify-content-between align-items-center"> <!--NAVBAR HOME-->
+                        <div><i class="bi bi-arrow-left-short text-secondary btn rounded-5 px-2 py-0 fs-3 border-0 my-3 me-2"></i><i class="bi bi-arrow-right-short text-secondary btn rounded-5 px-2 py-0 fs-3 border-0 my-3"></i></div>
+                        <div class="d-flex align-items-center">
+                            <div class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle rounded-5 text-white pe-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="assets/imgs/main/image-1.jpg" alt="profile" style="width: 40px;" class="rounded-circle">Lidia Nautilus...
                                 </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item text-white" href="#">Condividi Profilo</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Crea una playlist</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Logout</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- icona per attivita amici -->
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item text-white" href="#">Condividi Profilo</a></li>
+                                  <li><a class="dropdown-item text-white" href="#">Crea una playlist</a></li>
+                                  <li><a class="dropdown-item text-white" href="#">Logout</a></li>
+                                </ul>
+                            </div>
                         <div class="ms-2">
                             <button id="iconaSezioneAttivita" class="border-0 text-white bg-black rounded-circle px-2 py-1"><i class="bi bi-people"></i></button>
                         </div>
+                        </div>
+                        
+                    </nav>
+                    <header class="rounded-1"> <!--BRANO CONSIGLIATO-->
+                        
+                    </header>
+                    <section> <!--PLAYLIST-->
+                        <p class="h3 text-white my-3">Buonasera</p>
+                        <div class="p-0 m-0 row plscnt">
+                            <div class="col-4 p-0 m-0 d-flex justify-content-center">
+                                <div class="d-flex bg-secondary bg-opacity-25 rounded-1 text-white fw-bold align-items-center my-2 p-0" style="width: 95%;">
+                                <div class="playlistImgs me-3 rounded-start-3">
+                                    <div class="row p-0 m-0">
+                                        <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0 rounded-top-1 rounded-end-0">
+                                        <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0">
+                                    </div>
+                                    <div class="row p-0 m-0">
+                                        <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0 imgAngolo">
+                                        <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0">
+                                    </div>
+                                </div>
+                                <p class="p-0 m-0">Titolo della playlist</p>
+                            </div>
+                        </div>
+                        <div class="col-4 p-0 m-0 d-flex justify-content-center">
+                            <div class="d-flex bg-secondary bg-opacity-25 rounded-1 text-white fw-bold align-items-center my-2 p-0" style="width: 95%;">
+                            <div class="playlistImgs me-3 rounded-start-3">
+                                <div class="row p-0 m-0">
+                                    <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0 rounded-top-1 rounded-end-0">
+                                    <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0">
+                                </div>
+                                <div class="row p-0 m-0">
+                                    <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0 imgAngolo">
+                                    <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0">
+                                </div>
+                            </div>
+                            <p class="p-0 m-0">Titolo della playlist</p>
+                        </div>
                     </div>
-                       
-                    
-                </nav>
+                    <div class="col-4 p-0 m-0 d-flex justify-content-center">
+                        <div class="d-flex bg-secondary bg-opacity-25 rounded-1 text-white fw-bold align-items-center my-2 p-0" style="width: 95%;">
+                        <div class="playlistImgs me-3 rounded-start-3">
+                            <div class="row p-0 m-0">
+                                <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0 rounded-top-1 rounded-end-0">
+                                <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0">
+                            </div>
+                            <div class="row p-0 m-0">
+                                <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0 imgAngolo">
+                                <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0">
+                            </div>
+                        </div>
+                        <p class="p-0 m-0">Titolo della playlist</p>
+                    </div>
+                </div>
+                <div class="col-4 p-0 m-0 d-flex justify-content-center">
+                    <div class="d-flex bg-secondary bg-opacity-25 rounded-1 text-white fw-bold align-items-center my-2 p-0" style="width: 95%;">
+                    <div class="playlistImgs me-3 rounded-start-3">
+                        <div class="row p-0 m-0">
+                            <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0 rounded-top-1 rounded-end-0">
+                            <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0">
+                        </div>
+                        <div class="row p-0 m-0">
+                            <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0 imgAngolo">
+                            <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0">
+                        </div>
+                    </div>
+                    <p class="p-0 m-0">Titolo della playlist</p>
+                </div>
+            </div>
+            <div class="col-4 p-0 m-0 d-flex justify-content-center">
+                <div class="d-flex bg-secondary bg-opacity-25 rounded-1 text-white fw-bold align-items-center my-2 p-0" style="width: 95%;">
+                <div class="playlistImgs me-3 rounded-start-3">
+                    <div class="row p-0 m-0">
+                        <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0 rounded-top-1 rounded-end-0">
+                        <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0">
+                    </div>
+                    <div class="row p-0 m-0">
+                        <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0 imgAngolo">
+                        <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0">
+                    </div>
+                </div>
+                <p class="p-0 m-0">Titolo della playlist</p>
+            </div>
+        </div>
+        <div class="col-4 p-0 m-0 d-flex justify-content-center">
+            <div class="d-flex bg-secondary bg-opacity-25 rounded-1 text-white fw-bold align-items-center my-2 p-0" style="width: 95%;">
+            <div class="playlistImgs me-3 rounded-start-3">
+                <div class="row p-0 m-0">
+                    <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0 rounded-top-1 rounded-end-0">
+                    <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0">
+                </div>
+                <div class="row p-0 m-0">
+                    <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0 imgAngolo">
+                    <img src="assets/imgs/main/image-11.jpg" alt="" style="width: 4dvh" class="p-0 m-0">
+                </div>
+            </div>
+            <p class="p-0 m-0">Titolo della playlist</p>
+        </div>
+    </div>
+                            
+                        </div>
+                    </section>
+                    <section> <!--ALBUM-->
+                        <div class="d-flex justify-content-between">
+                            <p class="h4 text-white my-3">Altro di ciò che ti piace</p>
+                            <button id="buttonHeaderHome" class="btn text-white text-opacity-50 px-3 border-0 fw-bold">
+                                VISUALIZZA TUTTO
+                            </button>
+                        </div>
+                        <div class="row p-0 m-0 d-flex justify-content-evenly albumContainer">
+                            
+                        </div>
+                    </section>
+                </main>
 
+                <!-- icona per attivita amici -->
+                        <!-- <div class="ms-2">
+                            <button id="iconaSezioneAttivita" class="border-0 text-white bg-black rounded-circle px-2 py-1"><i class="bi bi-people"></i></button>
+                        </div> -->
             </div>
 
 

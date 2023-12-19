@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  if (window.location.pathname.includes('home.html')) {
+  if (window.location.pathname.includes('index.html')) {
 
   // Funzione che crea un elemento card
   function createAlbumCard(album) { //CREATORE DI CARD
