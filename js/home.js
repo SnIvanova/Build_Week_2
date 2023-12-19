@@ -157,7 +157,7 @@ async function getIdBanner() {
 getIdBanner();
 
 //FUNZIONI CREAZIONE PLAYLISTS
-/* function createPlaylist(playlist) { //CREATORE DI CARD
+function createPlaylist(album) { //CREATORE DI CARD
   const card = document.createElement("div"); // contenitore banner
   card.classList.add("col-4", "p-0", "m-0", "d-flex", "justify-content-center");
 
@@ -173,19 +173,9 @@ getIdBanner();
           <img src="${album.cover}" alt="" style="width: 4dvh" class="p-0 m-0">
       </div>
   </div>
-  <p class="p-0 m-0">Titolo della playlist</p>
+  <p class="p-0 m-0 ms-2">${album.title}</p>
 </div>
   `;
-
-  let deleteBannerBtn = card.querySelector('#buttonHeaderHome');
-
-  deleteBannerBtn.addEventListener('click', () => {
-    // Check if the header exists before trying to hide it
-    let headerElement = document.querySelector('header');
-    if (headerElement) {
-      headerElement.style.display = "none";
-    }
-  });
 
   return card;
 }
@@ -202,11 +192,12 @@ async function getIdPlaylist() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  let albumId = getRandomId(302127, 302227);
+  let playlistId = getRandomId(302127, 302227);
 
   
+  for (let i = 0; i <= 6; i++) {
     try {
-      const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`, {
+      const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${playlistId}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -218,13 +209,15 @@ async function getIdPlaylist() {
       if (data.cover) {
         displayPlaylist(data);
       }
+
+      playlistId++;
     } catch (error) {
       console.error("Errore durante il recupero dei dati:", error);
     }
-  
+  }
 }
 
-getIdPlaylist(); */
+getIdPlaylist(); 
 
 
 }}); //CHIUSURA CONTENT LOAD E IF 
