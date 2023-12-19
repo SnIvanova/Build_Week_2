@@ -146,6 +146,7 @@ createPlaylist(arrayPlaylist);
     let nomeArtista = document.querySelector("#containerScritteArtista h1");
     let monthListeners = document.querySelector("#monthListeners");
     let containerCanzoni = document.querySelector("#containerCanzoni");
+    let provaCanzoni = document.querySelector("#provaCanzoni");
 
     async function getIdArist() {
       function getRandomId(min, max) {
@@ -165,9 +166,12 @@ createPlaylist(arrayPlaylist);
     
           const data = await response.json();
           if (data.picture) {
+            console.log(data.tracklist)
             setArtBackground(data.picture_xl);
             setArtName(data.name);
             setAscolti(data.nb_fan);
+            getTracks(data.tracklist);
+            /* getTracks(getTracks(data.tracklist)); */
           }
 
         } catch (error) {
@@ -190,6 +194,56 @@ createPlaylist(arrayPlaylist);
       }
     }
 
+
+    // OTTENIMENTO TRACKLIST ARTISTA
+
+    async function getTracks (tracklist) {
+
+      let brani = []
+
+      await fetch (tracklist, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        }
+      })
+      .catch(error => {
+        console.error('Errore recupero dati:', error);
+      })
+      /* .catch(error) {
+        console.error('Errore durante il recupero dei dati:', error);
+      } */
+      .then (response => response.json())
+      .then (json => brani = json)
+
+      console.log(brani.data)
+
+      for (let i=0; i <= brani.data.length; i++) {
+        let p = document.createElement("div")
+
+        p.innerHTML = `<div class="row d-flex align-items-center mb-3" style="height: 3rem;">
+        <div class="col-6 d-flex align-items-center" style="height: 100%;">
+            <div class="d-flex align-items-center" style="height: 100%;">
+                <p class="text-white m-0">${i+1}</p>
+                <img class="imageWidth mx-3" src="${brani.data[i].album.cover}" alt="Immagine canzone">
+            </div>
+            <div>
+                <div>
+                    <p class="text-white m-0">${brani.data[i].title}</p>
+                </div>
+            </div>                                                    
+        </div>
+        <div class="col-4 d-flex justify-content-center">
+            <p class="text-white m-0">${brani.data[i].rank.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")}</p>
+        </div>
+        <div class="col-2">
+            <p class="text-white m-0">${brani.data[i].duration.toString().replace(/(\d)(?=(\d\d)+(?!\d))/g, "$1:")}</p> 
+        </div>
+    </div>`
+
+    containerCanzoni.appendChild(p);
+      }
+    }    
   })
 
 
