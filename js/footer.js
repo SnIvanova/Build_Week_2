@@ -96,3 +96,21 @@
     }, true);
   })
   
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const icon1 = document.getElementById('icon1');
+    const icon2 = document.getElementById('icon2');
+  
+    icon1.addEventListener('click', () => {
+      toggleIcons();
+    });
+  
+    icon2.addEventListener('click', () => {
+      toggleIcons();
+    });
+  
+    function toggleIcons() {
+      icon1.classList.toggle('hidden');
+      icon2.classList.toggle('hidden');
+    }
+  });

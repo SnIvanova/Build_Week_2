@@ -68,3 +68,12 @@
       }
     }
   }
+
+  #icon1, #icon2 {
+    font-size: 36px;
+    cursor: pointer;
+  }
+  
+  .hidden {
+    display: none;
+  }
