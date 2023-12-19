@@ -27,8 +27,24 @@
 .dropdown-item:hover {
     background-color: #313131;
 }
+.albumData {
+    background-color: #21252900;
+}
 
-/* Amici */
+.album {
+    position: relative; /* Ensure the position is relative for absolute positioning */
+  }
+.gradient-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #1ED760; /* Ensure it's above the image */
+  }
+
+  /* Amici */
 #dash, #window, #cross  {
     font-size: 0.5rem;
 }
