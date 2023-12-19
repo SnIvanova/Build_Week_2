@@ -139,3 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
       restoreButton.style.display = 'none';
   });
 });
+
+
+// search function
+let btnSearch = document.querySelector('#searchBtn')
+btnSearch.addEventListener('click', () => {
+  location.href = "search.html";
+});
