@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Funzione che crea un elemento card
   function createAlbumCard(album) { //CREATORE DI CARD
     const card = document.createElement("a");
-    card.href = "album.html";
+    //card.href = "album.html";
+    card.href = `album.html?id=${album.id}`; 
     card.classList.add("col-2", "my-2", "mx-2", "bgSched", "bg-opacity-50", "text-white", "rounded-3", "text-decoration-none");
   
     const AlbumImage = document.createElement("img");
